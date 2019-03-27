@@ -10,7 +10,7 @@ const forecast = (lat,long,callback) => {
             callback('Unable to find weather for given coordinates',undefined)
         }
         else {
-            callback(undefined,result.daily.data[0].summary + ' It is currently ' + result.currently.temperature + ' Farenheit out. There is a ' + result.currently.precipProbability + '% chance of rain.')
+            callback(undefined,result.daily.data[0].summary + ' It is currently ' + result.currently.temperature + ' Farenheit out. There is a ' + result.currently.precipProbability + '% chance of rain. The high today is '+result.daily.data[0].temperatureHigh+' with a low of '+result.daily.data[0].temperatureLow)
         }
     })
 
